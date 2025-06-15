@@ -1,30 +1,32 @@
-# Next.js marketing platform
+# MarketingAI Pro
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Advanced AI-powered marketing and copywriting automation platform.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/shawaizahmad-7116s-projects/v0-next-js-marketing-platform)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/fNR2BYlJPnl)
+## Getting Started
 
-## Overview
+1. Clone the repository
+2. Install dependencies: `pnpm install`
+3. Copy `.env.local.example` to `.env.local` and fill in your Supabase credentials
+4. Run the development server: `pnpm dev`
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Environment Variables
 
-## Deployment
+- `NEXT_PUBLIC_SUPABASE_URL` - Your Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` - Your Supabase anonymous key
 
-Your project is live at:
+## Features
 
-**[https://vercel.com/shawaizahmad-7116s-projects/v0-next-js-marketing-platform](https://vercel.com/shawaizahmad-7116s-projects/v0-next-js-marketing-platform)**
+- AI-powered email generation
+- Marketing copy creation
+- User authentication with Supabase
+- Responsive design
+- Dark/light mode support
 
-## Build your app
+## Tech Stack
 
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/fNR2BYlJPnl](https://v0.dev/chat/projects/fNR2BYlJPnl)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Supabase
+- Radix UI
+- Lucide Icons

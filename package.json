@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "approve-builds": "pnpm config set auto-install-peers true"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.0.3",
@@ -42,5 +43,10 @@
     "postcss": "^8.5",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "allowedDeprecatedVersions": {
+      "unrs-resolver": "*"
+    }
   }
 }
