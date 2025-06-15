@@ -1,32 +1,39 @@
 # MarketingAI Pro
 
-Advanced AI-powered marketing and copywriting automation platform.
+🚀 Advanced AI-powered marketing and copywriting automation platform built with Next.js 14, TypeScript, and Supabase.
 
-## Getting Started
+## ✨ Features
 
-1. Clone the repository
-2. Install dependencies: `pnpm install`
-3. Copy `.env.local.example` to `.env.local` and fill in your Supabase credentials
-4. Run the development server: `pnpm dev`
+- 🤖 AI-powered email generation using Gemini & LLaMA APIs
+- ✍️ Marketing copy creation for social media, ads, and blogs
+- 🔐 Secure authentication with Supabase
+- 📱 Fully responsive design
+- 🌙 Dark/light mode support
+- ⚡ Optimized performance and SEO
+- 🎨 Beautiful UI with Tailwind CSS and Radix UI
 
-## Environment Variables
+## 🛠️ Tech Stack
 
-- `NEXT_PUBLIC_SUPABASE_URL` - Your Supabase project URL
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY` - Your Supabase anonymous key
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI
+- **Authentication**: Supabase Auth
+- **Database**: Supabase
+- **Icons**: Lucide React
+- **Package Manager**: pnpm
 
-## Features
+## 🚀 Getting Started
 
-- AI-powered email generation
-- Marketing copy creation
-- User authentication with Supabase
-- Responsive design
-- Dark/light mode support
+### Prerequisites
 
-## Tech Stack
+- Node.js 18.17.0 or later
+- pnpm 8.0.0 or later
+- Supabase account
 
-- Next.js 14
-- TypeScript
-- Tailwind CSS
-- Supabase
-- Radix UI
-- Lucide Icons
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd marketing-automation-saas

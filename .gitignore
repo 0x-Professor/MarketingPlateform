@@ -38,3 +38,13 @@ next-env.d.ts
 
 # pnpm
 .pnpm-debug.log*
+pnpm-lock.yaml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
