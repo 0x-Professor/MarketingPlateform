@@ -113,13 +113,12 @@ export default function LoginOTPPage() {
                 <div className="relative">
                   <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
-                    className="input-glass h-12"
                     id="email"
                     type="email"
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pl-10"
+                    className="input-glass h-12 pl-10"
                     required
                   />
                 </div>
@@ -133,13 +132,12 @@ export default function LoginOTPPage() {
               <div className="space-y-2">
                 <Label htmlFor="otp">Verification Code</Label>
                 <Input
-                  className="input-glass h-12"
                   id="otp"
                   type="text"
                   placeholder="Enter 6-digit code"
                   value={otp}
                   onChange={(e) => setOtp(e.target.value)}
-                  className="text-center text-lg tracking-widest"
+                  className="input-glass h-12 text-center text-lg tracking-widest"
                   maxLength={6}
                   required
                 />

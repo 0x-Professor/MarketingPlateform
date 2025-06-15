@@ -105,13 +105,12 @@ export default function SignupPage() {
               <div className="relative">
                 <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                 <Input
-                  className="input-glass h-12"
                   id="fullName"
                   type="text"
                   placeholder="Enter your full name"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="pl-10"
+                  className="input-glass h-12 pl-10"
                   required
                 />
               </div>
@@ -121,13 +120,12 @@ export default function SignupPage() {
               <div className="relative">
                 <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                 <Input
-                  className="input-glass h-12"
                   id="email"
                   type="email"
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="pl-10"
+                  className="input-glass h-12 pl-10"
                   required
                 />
               </div>
@@ -137,13 +135,12 @@ export default function SignupPage() {
               <div className="relative">
                 <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                 <Input
-                  className="input-glass h-12"
                   id="password"
                   type="password"
                   placeholder="Create a password (min 6 characters)"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="pl-10"
+                  className="input-glass h-12 pl-10"
                   minLength={6}
                   required
                 />

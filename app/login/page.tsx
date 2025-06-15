@@ -74,13 +74,12 @@ export default function LoginPage() {
               <div className="relative">
                 <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                 <Input
-                  className="input-glass h-12"
                   id="email"
                   type="email"
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="pl-10"
+                  className="input-glass h-12 pl-10"
                   required
                 />
               </div>
@@ -90,13 +89,12 @@ export default function LoginPage() {
               <div className="relative">
                 <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                 <Input
-                  className="input-glass h-12"
                   id="password"
                   type="password"
                   placeholder="Enter your password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="pl-10"
+                  className="input-glass h-12 pl-10"
                   required
                 />
               </div>
