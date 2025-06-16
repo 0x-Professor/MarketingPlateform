@@ -46,14 +46,10 @@
 
 3. **Set up environment variables**
    \`\`\`bash
-   cp .env.local.example .env.local
+   cp .env.example .env.local
    \`\`\`
    
-   Fill in your Supabase credentials:
-   \`\`\`env
-   NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-   \`\`\`
+   Fill in your Supabase credentials in `.env.local`
 
 4. **Run the development server**
    \`\`\`bash
@@ -63,26 +59,19 @@
 5. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📁 Project Structure
+## 📦 Deployment
 
-\`\`\`
-marketing-automation-saas/
-├── app/                    # Next.js 14 App Router
-│   ├── api/               # API routes
-│   ├── dashboard/         # Dashboard pages
-│   ├── generate/          # Email generation
-│   ├── copy/              # Copy generation
-│   ├── login/             # Authentication
-│   └── globals.css        # Global styles
-├── components/            # Reusable components
-│   ├── ui/                # UI components
-│   ├── navbar.tsx         # Navigation
-│   └── auth-provider.tsx  # Auth context
-├── lib/                   # Utilities and configs
-│   ├── supabase.ts        # Supabase client
-│   ├── gemini-api.ts      # Gemini AI integration
-│   └── llama-api.ts       # LLaMA AI integration
-└── middleware.ts          # Route protection
+### Vercel (Recommended)
+
+1. **Connect your repository to Vercel**
+2. **Add environment variables in Vercel dashboard**
+3. **Deploy automatically on push to main branch**
+
+### Manual Deployment
+
+\`\`\`bash
+npm run build
+npm start
 \`\`\`
 
 ## 🔧 Configuration
@@ -90,176 +79,36 @@ marketing-automation-saas/
 ### Supabase Setup
 
 1. Create a new Supabase project
-2. Enable authentication providers
-3. Configure email settings (optional)
-4. Copy your project URL and anon key to `.env.local`
+2. Enable authentication
+3. Add your project URL and anon key to `.env.local`
 
-### AI API Setup
+### Environment Variables
 
-The project includes pre-configured API keys for:
-- **Gemini AI**: For primary email generation
-- **LLaMA AI**: For fallback copy generation
+Required environment variables:
 
-## 🚀 Deployment
+- `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase anonymous key
 
-### Vercel (Recommended)
+## 📝 Scripts
 
-1. **Connect your repository to Vercel**
-2. **Add environment variables**
-3. **Deploy**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
 
-\`\`\`bash
-npm run build
-\`\`\`
+## 🤝 Contributing
 
-### Docker
-
-\`\`\`bash
-# Build the image
-docker build -t marketing-ai-pro .
-
-# Run the container
-docker run -p 3000:3000 marketing-ai-pro
-\`\`\`
-
-### Manual Deployment
-
-\`\`\`bash
-# Build for production
-npm run build
-
-# Start production server
-npm start
-\`\`\`
-
-## 📊 Features Overview
-
-### 🤖 AI Email Generation
-- Complete email campaigns with subject lines
-- Multiple email types (welcome, promotional, follow-up)
-- Customizable tone and messaging
-- Dual AI system with fallback support
-
-### ✍️ Copy Generation
-- Social media posts
-- Ad copy for multiple platforms
-- Blog content and introductions
-- SEO-optimized content
-
-### 📈 Dashboard
-- Campaign analytics
-- Performance metrics
-- Recent activity tracking
-- Quick action shortcuts
-
-### 🔐 Authentication
-- Secure user registration
-- Email/password login
-- OTP authentication support
-- Protected routes
-
-## 🛡️ Security Features
-
-- Environment variable protection
-- API route security
-- CORS configuration
-- Input validation
-- XSS protection
-- CSRF protection
-
-## 🎨 UI/UX Features
-
-- Responsive design for all devices
-- Dark/light mode toggle
-- Smooth animations and transitions
-- Accessible components
-- Loading states and error handling
-- Toast notifications
-
-## 📱 Mobile Support
-
-- Fully responsive design
-- Touch-friendly interface
-- Mobile-optimized navigation
-- Progressive Web App ready
-
-## 🔄 API Integration
-
-### Gemini AI
-- Primary content generation
-- Advanced language models
-- High-quality output
-- Rate limiting and error handling
-
-### LLaMA AI
-- Fallback content generation
-- Alternative AI provider
-- Redundancy and reliability
-- Custom prompt engineering
-
-## 🧪 Testing
-
-\`\`\`bash
-# Run type checking
-npm run type-check
-
-# Run linting
-npm run lint
-
-# Fix linting issues
-npm run lint:fix
-\`\`\`
-
-## 📦 Build Optimization
-
-- Tree shaking for smaller bundles
-- Image optimization
-- Code splitting
-- Static generation where possible
-- Compression and minification
-
-## 🔧 Development Tools
-
-- TypeScript for type safety
-- ESLint for code quality
-- Prettier for code formatting
-- Husky for git hooks
-- Tailwind CSS for styling
-
-## 🚀 Performance
-
-- Lighthouse score: 95+
-- Core Web Vitals optimized
-- Lazy loading
-- Image optimization
-- Bundle size optimization
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📄 License
 
 This project is licensed under the MIT License.
 
-## 🤝 Contributing
+## 🆘 Support
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📞 Support
-
-For support and questions:
-- Create an issue on GitHub
-- Check the documentation
-- Contact support team
-
-## 🔄 Updates
-
-Stay updated with the latest features:
-- Watch the repository
-- Follow release notes
-- Check changelog
-
----
-
-Built with ❤️ using Next.js, TypeScript, and Supabase.
+If you need help, please open an issue or contact support.
