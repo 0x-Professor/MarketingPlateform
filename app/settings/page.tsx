@@ -9,7 +9,7 @@ import { Switch } from "@/components/ui/switch"
 import { Separator } from "@/components/ui/separator"
 import { Navbar } from "@/components/navbar"
 import { FloatingChat } from "@/components/floating-chat"
-import { createClient } from "@/lib/supabase"
+import { createClient } from "@/lib/supabase-client"
 import { useToast } from "@/components/ui/use-toast"
 import { Settings, User, Bell, Shield, CreditCard } from "lucide-react"
 

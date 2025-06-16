@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Navbar } from "@/components/navbar"
 import { FloatingChat } from "@/components/floating-chat"
-import { createServerClient } from "@/lib/supabase"
+import { createServerClient } from "@/lib/supabase-server"
 import { mockServiceTemplates } from "@/lib/mock-data"
 import { FileText, Download, Eye, Star, Sparkles } from "lucide-react"
 import Image from "next/image"
 
 export default async function TemplatesPage() {
-  const supabase = createServerClient()
+  const supabase = await createServerClient()
   const {
     data: { session },
   } = await supabase.auth.getSession()

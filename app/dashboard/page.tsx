@@ -2,13 +2,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/navbar"
 import { FloatingChat } from "@/components/floating-chat"
-import { createServerClient } from "@/lib/supabase"
+import { createServerClient } from "@/lib/supabase-server"
 import { mockDashboardData } from "@/lib/mock-data"
 import { Mail, PenTool, FileText, TrendingUp, MousePointer, Eye, Sparkles } from "lucide-react"
 import Link from "next/link"
 
 export default async function DashboardPage() {
-  const supabase = createServerClient()
+  const supabase = await createServerClient()
   const {
     data: { session },
   } = await supabase.auth.getSession()
