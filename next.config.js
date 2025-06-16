@@ -20,6 +20,7 @@ const nextConfig = {
     serverComponentsExternalPackages: ["@supabase/supabase-js"],
     optimizePackageImports: ["lucide-react", "@radix-ui/react-icons"],
   },
+  output: "standalone",
   webpack: (config, { isServer, dev }) => {
     // Handle client-side fallbacks
     if (!isServer) {
@@ -46,6 +47,7 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
+  swcMinify: true,
 
   // Security headers
   async headers() {
@@ -64,6 +66,28 @@ const nextConfig = {
           {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",
+          },
+          {
+            key: "X-XSS-Protection",
+            value: "1; mode=block",
+          },
+        ],
+      },
+      {
+        source: "/api/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "no-cache, no-store, must-revalidate",
+          },
+        ],
+      },
+      {
+        source: "/_next/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
           },
         ],
       },

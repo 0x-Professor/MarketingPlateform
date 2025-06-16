@@ -2,6 +2,7 @@
   "name": "marketing-automation-saas",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@10.2.4",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +11,9 @@
     "lint:fix": "next lint --fix",
     "type-check": "tsc --noEmit",
     "clean": "rm -rf .next",
-    "postinstall": "pnpm dlx @next/codemod@latest new-link ."
+    "docker:build": "docker build -t marketing-ai-pro .",
+    "docker:run": "docker run -p 3000:3000 marketing-ai-pro",
+    "health": "curl http://localhost:3000/api/health"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.1.0",
@@ -48,22 +51,11 @@
     "tailwindcss": "^3.4.13",
     "typescript": "^5"
   },
-  "pnpm": {
-    "overrides": {
-      "unrs-resolver": "npm:@rollup/plugin-node-resolve@^15.2.3"
-    },
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "react": "18",
-        "react-dom": "18"
-      },
-      "ignoreMissing": [
-        "webpack"
-      ]
-    }
+  "overrides": {
+    "unrs-resolver": "npm:@rollup/plugin-node-resolve@^15.2.3"
   },
   "engines": {
     "node": ">=18.17.0",
-    "pnpm": ">=8.0.0"
+    "npm": ">=9.0.0"
   }
 }
