@@ -24,15 +24,15 @@ function Calendar({
         // month: "space-y-4", // Original month style, now overridden by the one from 'months'
         caption: "flex justify-center pt-1 relative items-center",
         // caption_label: "text-sm font-medium", // Removed to address TS2769
-        // nav: "space-x-1 flex items-center", // Removed due to type error
-        // nav_button: cn( // Removed due to type error
-        //   buttonVariants({ variant: "outline" }),
-        //   "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
-        // ),
-        navButtonPrev: "absolute left-1", // Changed from nav_button_previous
-        navButtonNext: "absolute right-1", // Changed from nav_button_next
-        // table: "w-full border-collapse space-y-1", // Removed due to type error
-        headRow: "flex", // Changed from head_row
+        nav: "space-x-1 flex items-center",
+        nav_button: cn(
+          buttonVariants({ variant: "outline" }),
+          "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
+        ),
+        nav_button_previous: "absolute left-1",
+        nav_button_next: "absolute right-1",
+        table: "w-full border-collapse space-y-1",
+        head_row: "flex",
         headCell:
           "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]", // Changed from head_cell
         row: "flex w-full mt-2",
