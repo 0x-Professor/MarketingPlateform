@@ -334,7 +334,7 @@ export default function CopyPage() {
                   ) : (
                     <div className="text-center py-12 text-white/60">
                       <PenTool className="mx-auto h-12 w-12 mb-4 opacity-50" />
-                      <p>Fill in the form and click "Generate Copy" to see your content here.</p>
+                      <p>Fill in the form and click &quot;Generate Copy&quot; to see your content here.</p>
                     </div>
                   )}
                 </CardContent>

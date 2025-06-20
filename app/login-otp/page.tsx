@@ -2,7 +2,6 @@
 
 import type React from "react"
 import { useState } from "react"
-import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -17,7 +16,6 @@ export default function LoginOTPPage() {
   const [otp, setOtp] = useState("")
   const [step, setStep] = useState<"email" | "otp">("email")
   const [loading, setLoading] = useState(false)
-  const router = useRouter()
   const { toast } = useToast()
   const supabase = createClient()
 
@@ -46,7 +44,7 @@ export default function LoginOTPPage() {
         })
         setStep("otp")
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
         description: "An unexpected error occurred",
@@ -62,7 +60,7 @@ export default function LoginOTPPage() {
     setLoading(true)
 
     try {
-      const { data, error } = await supabase.auth.verifyOtp({
+      const { error } = await supabase.auth.verifyOtp({
         email,
         token: otp,
         type: "email",
@@ -81,7 +79,7 @@ export default function LoginOTPPage() {
         })
         window.location.href = "/dashboard"
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
         description: "An unexpected error occurred",
@@ -159,7 +157,7 @@ export default function LoginOTPPage() {
               </Link>
             </p>
             <p className="text-sm text-muted-foreground mt-2">
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <Link href="/signup" className="text-primary hover:underline">
                 Sign up
               </Link>

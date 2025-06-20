@@ -14,6 +14,11 @@ interface GeminiResponse {
   }
 }
 
+interface EnhanceEmailParams {
+  productName: string;
+  companyName: string;
+}
+
 export class GeminiAPI {
   private apiKey: string
   private baseUrl: string
@@ -223,7 +228,7 @@ Write engaging, conversion-focused copy that matches the platform and tone.`
     }
   }
 
-  private enhanceIncompleteEmail(content: string, params: any): string {
+  private enhanceIncompleteEmail(content: string, params: EnhanceEmailParams): string {
     console.log("🟡 GEMINI API: Enhancing incomplete email content")
 
     let subject = "Transform Your Business Today!"

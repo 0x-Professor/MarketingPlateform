@@ -109,7 +109,7 @@ export default function GeneratePage() {
           </div>
         ),
       })
-    } catch (error) {
+    } catch {
       toast({
         title: "Copy Failed",
         description: "Unable to copy to clipboard. Please try again.",
@@ -140,7 +140,7 @@ export default function GeneratePage() {
           </div>
         ),
       })
-    } catch (error) {
+    } catch {
       toast({
         title: "Download Failed",
         description: "Unable to download file. Please try again.",
@@ -377,7 +377,7 @@ export default function GeneratePage() {
                     <Mail className="mx-auto h-20 w-20 mb-6 opacity-50" />
                     <p className="text-2xl mb-4 font-medium">Ready to create your email campaign?</p>
                     <p className="text-lg">
-                      Fill in the form and click "Generate Complete Email" to see your content here.
+                      Fill in the form and click &quot;Generate Complete Email&quot; to see your content here.
                     </p>
                   </div>
                 )}

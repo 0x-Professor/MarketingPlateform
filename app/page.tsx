@@ -375,8 +375,8 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                "MarketingAI Pro transformed our email campaigns. We saw a 300% increase in engagement within the first
-                month."
+                &quot;MarketingAI Pro transformed our email campaigns. We saw a 300% increase in engagement within the first
+                month.&quot;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
@@ -396,7 +396,7 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                "The AI-generated copy is incredible. It's like having a world-class copywriter on our team 24/7."
+                &quot;The AI-generated copy is incredible. It&apos;s like having a world-class copywriter on our team 24/7.&quot;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
@@ -416,7 +416,7 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                "Best investment we've made. The ROI is incredible and the time savings are massive."
+                &quot;Best investment we&apos;ve made. The ROI is incredible and the time savings are massive.&quot;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
