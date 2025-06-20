@@ -111,10 +111,14 @@ const ChartTooltipContent = React.forwardRef<
       indicator?: "line" | "dot" | "dashed"
       nameKey?: string
       labelKey?: string
+      labelClassName?: string; // Keep in props definition
     }
 >(
   (
-    {
+    props, // Use props object directly for some properties
+    ref
+  ) => {
+    const {
       active,
       payload,
       className,
@@ -123,14 +127,12 @@ const ChartTooltipContent = React.forwardRef<
       hideIndicator = false,
       label,
       labelFormatter,
-      labelClassName,
+      // labelClassName, // Removed from destructuring
       formatter,
       color,
       nameKey,
       labelKey,
-    },
-    ref
-  ) => {
+    } = props;
     const { config } = useChart()
 
     const tooltipLabel = React.useMemo(() => {
@@ -153,13 +155,14 @@ const ChartTooltipContent = React.forwardRef<
       if (formattedLabel === null || formattedLabel === undefined) {
         return null;
       }
-      return <div className={cn("font-medium", labelClassName)}>{formattedLabel}</div>;
+      // Use props.labelClassName directly
+      return <div className={cn("font-medium", props.labelClassName)}>{formattedLabel}</div>;
     }, [
       label,
       labelFormatter,
       payload,
       hideLabel,
-      labelClassName,
+      props.labelClassName, // Use props.labelClassName in dependency array
       config,
       labelKey,
     ])
