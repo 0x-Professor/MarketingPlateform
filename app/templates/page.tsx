@@ -10,9 +10,7 @@ import Image from "next/image"
 
 export default async function TemplatesPage() {
   const supabase = await createServerClient()
-  const {
-    data: { session },
-  } = await supabase.auth.getSession()
+  await supabase.auth.getSession()
 
   return (
     <div className="min-h-screen gradient-bg">

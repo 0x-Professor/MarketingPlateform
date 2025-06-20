@@ -24,7 +24,7 @@ export function FloatingChat() {
           <CardContent>
             <div className="space-y-3">
               <div className="bg-muted p-3 rounded-lg">
-                <p className="text-sm">Hi! I'm your AI marketing assistant. How can I help you today?</p>
+                <p className="text-sm">Hi! I&apos;m your AI marketing assistant. How can I help you today?</p>
               </div>
               <div className="space-y-2">
                 <Button variant="outline" size="sm" className="w-full justify-start">

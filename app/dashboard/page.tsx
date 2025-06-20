@@ -24,7 +24,7 @@ export default async function DashboardPage() {
               Welcome back, {session?.user?.user_metadata?.full_name || "User"}!
             </h1>
             <p className="text-white/90 text-xl md:text-2xl text-shadow">
-              Here's what's happening with your marketing campaigns today.
+              Here&apos;s what&apos;s happening with your marketing campaigns today.
             </p>
           </div>
 

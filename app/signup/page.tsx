@@ -2,7 +2,6 @@
 
 import type React from "react"
 import { useState } from "react"
-import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -17,7 +16,6 @@ export default function SignupPage() {
   const [password, setPassword] = useState("")
   const [fullName, setFullName] = useState("")
   const [loading, setLoading] = useState(false)
-  const router = useRouter()
   const { toast } = useToast()
 
   // Create supabase client once
@@ -29,7 +27,7 @@ export default function SignupPage() {
 
     try {
       // First try to sign up the user
-      const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
+      const { error: signUpError } = await supabase.auth.signUp({
         email,
         password,
         options: {
@@ -43,7 +41,7 @@ export default function SignupPage() {
       if (signUpError) {
         // If user already exists, try to sign them in
         if (signUpError.message.includes("already registered")) {
-          const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({
+          const { error: signInError } = await supabase.auth.signInWithPassword({
             email,
             password,
           })
@@ -76,7 +74,7 @@ export default function SignupPage() {
         })
         window.location.href = "/dashboard"
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
         description: "An unexpected error occurred",

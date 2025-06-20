@@ -9,7 +9,6 @@ import { Switch } from "@/components/ui/switch"
 import { Separator } from "@/components/ui/separator"
 import { Navbar } from "@/components/navbar"
 import { FloatingChat } from "@/components/floating-chat"
-import { createClient } from "@/lib/supabase-client"
 import { useToast } from "@/components/ui/use-toast"
 import { Settings, User, Bell, Shield, CreditCard } from "lucide-react"
 
@@ -27,9 +26,6 @@ export default function SettingsPage() {
   })
   const [loading, setLoading] = useState(false)
   const { toast } = useToast()
-
-  // Create supabase client once
-  const [supabase] = useState(() => createClient())
 
   const handleSaveProfile = async () => {
     setLoading(true)

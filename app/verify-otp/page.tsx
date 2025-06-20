@@ -34,7 +34,7 @@ export default function VerifyOTPPage() {
     setLoading(true)
 
     try {
-      const { data, error } = await supabase.auth.verifyOtp({
+      const { error } = await supabase.auth.verifyOtp({
         email,
         token: otp,
         type: "signup",
@@ -53,7 +53,7 @@ export default function VerifyOTPPage() {
         })
         router.push("/dashboard")
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
         description: "An unexpected error occurred",
@@ -86,7 +86,7 @@ export default function VerifyOTPPage() {
           description: "A new verification code has been sent to your email.",
         })
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
         description: "Failed to resend OTP",
@@ -106,7 +106,7 @@ export default function VerifyOTPPage() {
           </div>
           <CardTitle className="text-2xl">Verify Your Email</CardTitle>
           <CardDescription>
-            We've sent a verification code to <br />
+            We&apos;ve sent a verification code to <br />
             <strong>{email}</strong>
           </CardDescription>
         </CardHeader>
@@ -134,7 +134,7 @@ export default function VerifyOTPPage() {
           </form>
 
           <div className="mt-6 text-center space-y-2">
-            <p className="text-sm text-muted-foreground">Didn't receive the code?</p>
+            <p className="text-sm text-muted-foreground">Didn&apos;t receive the code?</p>
             <Button
               variant="ghost"
               onClick={handleResendOTP}
