@@ -17,6 +17,8 @@ interface GeminiResponse {
 interface EnhanceEmailParams {
   productName: string;
   companyName: string;
+  emailType?: string;
+  tone?: string;
 }
 
 export class GeminiAPI {

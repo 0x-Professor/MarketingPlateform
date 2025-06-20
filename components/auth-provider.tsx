@@ -55,7 +55,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(async (event: AuthChangeEvent, session) => {
-      if (event === "TOKEN_REFRESH_FAILED" || event === "SIGNED_OUT" || event === "USER_DELETED") {
+      if (event === "SIGNED_OUT") {
         // refresh token is invalid or user signed out elsewhere ─ purge auth state
         await supabase.auth.signOut().catch(() => {}) // best-effort
         setUser(null)
