@@ -16,8 +16,8 @@ const nextConfig = {
     ],
     unoptimized: false,
   },
+  serverExternalPackages: ["@supabase/supabase-js"], // Moved from experimental
   experimental: {
-    serverComponentsExternalPackages: ["@supabase/supabase-js"],
     optimizePackageImports: ["lucide-react", "@radix-ui/react-icons"],
   },
   output: "standalone",
